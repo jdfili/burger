@@ -1,0 +1,47 @@
+<div class="container text-center">
+    <h1>Burgers</h1>
+    <hr><br><br>
+    <div class="jumbotron">
+        <div class="row">
+    <form class="text-center col-md-2">
+        <h2>Add a burger</h2><hr>
+        <input type="text" id="name" placeholder="name">
+        <button type="submit" class="post btn btn-primary mt-2">Add</button>
+    </form>
+            <div class="col-md-5">
+                <h2>Eaten</h2>
+                <hr>
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <li class="rounded">
+                        <p>
+                            {{this.id}}. {{this.burger_name}}
+                            <button class="devour btn btn-primary ml-2" data-id={{this.id}} data-devoured={{this.devoured}}>Devour</button>
+
+                        </p>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <h2>Devoured</h2>
+                <hr>
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li class="rounded pt-1">
+                        <p>
+                            {{this.id}}. {{this.burger_name}}
+                        </p>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

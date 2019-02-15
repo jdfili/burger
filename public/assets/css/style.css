@@ -1,0 +1,15 @@
+body {
+    background: rgb(66,133,244)
+}
+.jumbotron {
+    background: rgb(250, 249, 246, 0.8)
+}
+li {
+    list-style-type: none;
+    background: rgb(66,133,244);
+}
+
+button {
+    border: black;
+    border-radius: 10%;
+}
